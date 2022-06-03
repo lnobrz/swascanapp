@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+/* importing global styled component */
+import GlobalStyle from './Styles/GlobalStyle';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/* importing main app's jsx components*/
+import Header from './Header';
+import MainMenu from './MainMenu';
+import Footer from './Footer';
+
+const App = () => {
+  return <div>
+    <GlobalStyle />
+    <Header />
+    <MainMenu />
+    <Footer />
+  </div>;
+};
 
 export default App;

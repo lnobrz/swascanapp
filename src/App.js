@@ -8,12 +8,12 @@ import MainMenu from './MainMenu';
 import Footer from './Footer';
 
 const App = () => {
-  return <div>
+  return <>
     <GlobalStyle />
     <Header />
     <MainMenu />
     <Footer />
-  </div>;
+  </>;
 };
 
 export default App;

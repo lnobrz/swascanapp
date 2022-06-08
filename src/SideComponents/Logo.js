@@ -1,10 +1,12 @@
 import React from 'react';
 
 /*Logo styled components import */
-import LogoStyle from '../Styles/LogoStyle';
+import {LogoStyle, FooterLogoStyle} from '../Styles/LogoStyle';
 
-const Logo = () => {
+export const Logo = () => {
   return <LogoStyle>Swas<br />Can</ LogoStyle>;
 };
 
-export default Logo;
+export const FooterLogo = () => {
+  return <FooterLogoStyle>Swas<br />Can</ FooterLogoStyle>;
+};

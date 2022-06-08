@@ -7,10 +7,12 @@ import { TopArea } from './Styles/TopArea';
 
 const Header = () => {
   return(
+    <>
   <TopArea>
   <HeaderMenu />
   <Cover />
   </ TopArea>
+  </>
   );
 };
 

@@ -1,5 +1,12 @@
 import {createGlobalStyle} from "styled-components";
 
+/* Main menu pics imports*/
+
+import charactersMenuItemCover from "../Images/charactersCover.jpg";
+import moviesMenuItemCover from "../Images/moviesCover.jpg";
+import planetsMenuItemCover from "../Images/planetsCover.jpg";
+import speciesMenuItemCover from "../Images/speciesCover.jpg";
+
 /* Reseting CSS */
 
 const GlobalStyle = createGlobalStyle`html, body, div, span, applet, object, iframe,
@@ -27,11 +34,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
 body {
 	line-height: 1;
 }
-
 ol, ul {
 	list-style: none;
 }
@@ -46,6 +51,39 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}`;
+}
+/* Main Menu Changes */
 
+/* Changing main menu items background */
+
+.charactersBg{
+	background-image: url(${charactersMenuItemCover});
+	background-size: cover;
+}
+
+.moviesBg{
+	background-image: url(${moviesMenuItemCover});
+	background-size: cover;
+}
+
+.planetsBg{
+	background-image: url(${planetsMenuItemCover});
+	background-size: cover;
+}
+
+.speciesBg{
+	background-image: url(${speciesMenuItemCover});
+	background-size: cover;
+}
+
+/* Changing main menu items titles position so it can fit in the img div */
+
+.charactersItemTitle, .moviesItemTitle, .planetsItemTitle, .speciesItemTitle{
+	width: 120px;
+	text-align: center;
+	display: block;
+	position: absolute;
+	bottom: 20px;
+}
+`;
 export default GlobalStyle;

@@ -7,7 +7,6 @@ export const CoverContainer = styled.section`
   align-items: flex-end;
   margin-top: 28px;
   margin-right: 7.31em;
-  margin-bottom: 6em;
 `;
 export const CoverTitle = styled.h2`
   background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);

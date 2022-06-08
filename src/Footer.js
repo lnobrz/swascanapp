@@ -1,12 +1,14 @@
 import React from 'react';
 
 /* importing logo jsx and footer styled components */
-import Logo from './SideComponents/Logo';
-import { FooterMenuTitle, FooterMenuItem, FooterRights } from './Styles/FooterStyle';
+import { FooterLogo} from './SideComponents/Logo';
+import { FooterMenuTitle, FooterMenuItem, FooterRights, FooterContainer, FooterMenuFlex } from './Styles/FooterStyle';
 
 const Footer = () => {
-  return(
-  <footer>
+  return(<>
+  <FooterContainer>
+    <FooterMenuFlex>
+    <div>
     <FooterMenuTitle>Menu</ FooterMenuTitle>
     <nav>
       <ul>
@@ -17,16 +19,23 @@ const Footer = () => {
         <FooterMenuItem>Species</ FooterMenuItem>
         <FooterMenuItem>About</ FooterMenuItem>
       </ul>
+      </nav>
+      </div>
+      <div>
       <FooterMenuTitle>Contact-me</ FooterMenuTitle>
+      <nav>
       <ul>
         <FooterMenuItem>www.linkedin.com/in/lucas-nobrz</ FooterMenuItem>
         <FooterMenuItem>lucasnobre37@outlook.com</ FooterMenuItem>
         <FooterMenuItem>https://github.com/lnobrz</ FooterMenuItem>
       </ul>
     </nav>
-    <Logo />
-    <FooterRights>Lucas Nobre & SWASCAN. 2022. Alguns direitos reservados</ FooterRights>
-  </footer>
+    </div>
+    </ FooterMenuFlex>
+    <FooterLogo />
+  </ FooterContainer>
+  <FooterRights>Lucas Nobre & SWASCAN. 2022. Alguns direitos reservados</ FooterRights>
+  </>
   );
 };
 

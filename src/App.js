@@ -7,20 +7,20 @@ import Menu from './Header/HeaderMenu'
 import GlobalStyle from './GlobalStyles/GlobalStyle';
 
 /* importing react router dom*/
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './NotFound/NotFound';
 
 const App = () => {
   return (
-  <BrowserRouter>
+  <HashRouter>
     <GlobalStyle />
     <Menu />
     <Routes>
-      <Route path='/swascanapp/' element={<Home />}/>
+      <Route path='/' element={<Home />}/>
       <Route path='*' element={<NotFound />} />
     </Routes>
     <Footer />
-  </ BrowserRouter>);
+  </ HashRouter>);
 };
 
 export default App;

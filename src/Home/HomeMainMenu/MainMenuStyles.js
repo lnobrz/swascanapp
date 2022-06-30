@@ -58,6 +58,7 @@ export const MainMenuTitle = styled.h5`
 
 export const MainMenuNav = styled.nav`
   margin: 30px;
+  max-width: 100%;
 
   @media (max-width: 606px){
     margin: 0px 30px 30px 30px;
@@ -77,7 +78,7 @@ export const MainMenuUl = styled.nav`
 `;
 
 export const MainMenuItemContainer = styled.div`
-  margin: 15px;
+  margin: 5px;
   filter: drop-shadow(0px 2px 4px rgba(27, 26, 25, 0.25));
 `;
 

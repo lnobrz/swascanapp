@@ -1,7 +1,7 @@
 import React from 'react';
 
 /*Logo styled components import */
-import {LogoStyle, FooterLogoStyle, MobileMenuLogoStyle, MobileLogoContainer} from '../Styles/LogoStyle';
+import {LogoStyle, FooterLogoStyle, MobileMenuLogoStyle, MobileLogoContainer} from './LogoStyles';
 
 export const Logo = () => {
   return <LogoStyle>Swas<br />Can</ LogoStyle>;

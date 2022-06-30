@@ -1,14 +1,14 @@
 import React from 'react';
-import Home from './Home';
-import Footer from './Footer'
-import Menu from './SideComponents/Menu'
+import Home from './Home/Home';
+import Footer from './Footer/Footer'
+import Menu from './Header/HeaderMenu'
 
 /* importing global styled component */
-import GlobalStyle from './Styles/GlobalStyle';
+import GlobalStyle from './GlobalStyles/GlobalStyle';
 
 /* importing react router dom*/
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import NotFound from './SideComponents/NotFound';
+import NotFound from './NotFound/NotFound';
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import footerAreaBg from "../Images/footerBg.png"
-import croppedFooterAreaBg from "../Images/croppedFooterBg.png"
+import footerAreaBg from "../Images/Backgrounds/footerBg.png"
+import croppedFooterAreaBg from "../Images/Backgrounds/croppedFooterBg.png"
 
 export const FooterContainer = styled.footer`
   background-image: url(${footerAreaBg});

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import TopAreaBg from "../Images/bodyBg.jfif";
+import TopAreaBg from "../Images/Backgrounds/bodyBg.jfif";
 
 export const MenuNav = styled.nav`
   background-image: url(${TopAreaBg});

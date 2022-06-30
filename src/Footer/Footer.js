@@ -1,8 +1,8 @@
 import React from 'react';
 
 /* importing logo jsx and footer styled components */
-import { FooterLogo} from './SideComponents/Logo';
-import { FooterMenuTitle, FooterMenuItem, FooterRights, FooterContainer, FooterMenuFlex } from './Styles/FooterStyle';
+import { FooterLogo} from '../Logo/Logo';
+import { FooterMenuTitle, FooterMenuItem, FooterRights, FooterContainer, FooterMenuFlex } from './FooterStyle';
 
 const Footer = () => {
   return(<>

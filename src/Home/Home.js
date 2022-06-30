@@ -1,8 +1,8 @@
 import React from 'react';
-import Cover from './SideComponents/Cover'
+import Cover from './HomeCover/Cover'
 
 /* importing main app's jsx components*/
-import MainMenu from './MainMenu';
+import MainMenu from './HomeMainMenu/MainMenu';
 
 const Home = () => {
 

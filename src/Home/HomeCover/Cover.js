@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Cover styled components import */
-import { CoverTitle, CoverText, CoverContainer } from '../Styles/CoverStyle';
+import { CoverTitle, CoverText, CoverContainer } from './CoverStyles';
 
 const Cover = () => {
   return (

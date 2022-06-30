@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Main menu styled components imports */
-import { MainMenuTitle, MainMenuItemTitle, MainMenuContainer, MainMenuUl, MainMenuItemContainer, MainMenuItemImage, MainMenuNav} from './Styles/MainMenuStyle';
+import { MainMenuTitle, MainMenuItemTitle, MainMenuContainer, MainMenuUl, MainMenuItemContainer, MainMenuItemImage, MainMenuNav} from './MainMenuStyles';
 
 const MainMenu = () => {
   return (<MainMenuContainer>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { MobileMenuLogo } from './Logo';
-import {DesktopMenu, MobileClosedMenu, MobileOpenedMenu} from './HeaderMenus';
+import { MobileMenuLogo } from '../Logo/Logo';
+import {DesktopMenu, MobileClosedMenu, MobileOpenedMenu} from './HeaderMenuComponents';
 
 const Menu = () => {
 

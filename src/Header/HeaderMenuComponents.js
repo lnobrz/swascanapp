@@ -1,17 +1,16 @@
 import React from 'react';
-import {Logo} from './Logo';
-import mobileMenuButtonBg from "../Images/menuIcon.svg"
-import CloseMobileMenuButtonBg from '../Images/closeMenuIcon.svg';
-import homeIcon from "../Images/homeIcon.svg";
-import charactersIcon from "../Images/charactersIcon.svg";
-import moviesIcon from "../Images/moviesIcon.svg";
-import planetsIcon from "../Images/planetsIcon.svg";
-import speciesIcon from "../Images/speciesIcon.svg";
-import aboutIcon from "../Images/aboutIcon.svg";
+import {Logo} from '../Logo/Logo';
+import mobileMenuButtonBg from "../Images/Icons/menuIcon.svg"
+import CloseMobileMenuButtonBg from '../Images/Icons/closeMenuIcon.svg';
+import homeIcon from "../Images/Icons/homeIcon.svg";
+import charactersIcon from "../Images/Icons/charactersIcon.svg";
+import moviesIcon from "../Images/Icons/moviesIcon.svg";
+import planetsIcon from "../Images/Icons/planetsIcon.svg";
+import speciesIcon from "../Images/Icons/speciesIcon.svg";
+import aboutIcon from "../Images/Icons/aboutIcon.svg";
 
 /* Header menu styled components import */
-import { MenuItemsStyle, MenuStyle, MobileMenuButton, MobileMenuNav, CloseMobileMenuButton, MobileMenuTitle, MobileMenuContainer} from '../Styles/MenuStyle';
-import {MenuNav} from "../Styles/MenuStyle";
+import { MenuItemsStyle, MenuStyle, MobileMenuButton, MobileMenuNav, CloseMobileMenuButton, MobileMenuTitle, MobileMenuContainer, MenuNav} from '../Header/HeaderMenuStyles';
 import { Link } from 'react-router-dom';
 
 

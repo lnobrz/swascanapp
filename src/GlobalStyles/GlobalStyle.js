@@ -2,10 +2,10 @@ import {createGlobalStyle} from "styled-components";
 
 /* Main menu pics imports*/
 
-import charactersMenuItemCover from "../Images/charactersCover.jpg";
-import moviesMenuItemCover from "../Images/moviesCover.jpg";
-import planetsMenuItemCover from "../Images/planetsCover.jpg";
-import speciesMenuItemCover from "../Images/speciesCover.jpg";
+import charactersMenuItemCover from "../Images/Covers/charactersCover.jpg";
+import moviesMenuItemCover from "../Images/Covers/moviesCover.jpg";
+import planetsMenuItemCover from "../Images/Covers/planetsCover.jpg";
+import speciesMenuItemCover from "../Images/Covers/speciesCover.jpg";
 
 /* Reseting CSS */
 

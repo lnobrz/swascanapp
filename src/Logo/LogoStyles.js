@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import TopAreaBg from "../Images/bodyBg.jfif";
+import TopAreaBg from "../Images/Backgrounds/bodyBg.jfif";
 
 export const LogoStyle = styled.h1`
   background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);;

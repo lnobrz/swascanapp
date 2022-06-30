@@ -36,6 +36,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	min-width: 380px;
 }
 ol, ul {
 	list-style: none;
@@ -52,38 +53,102 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* General Menu Links Adjusts */
+
+.headerMenuLink{
+	text-decoration: none;
+}
+
+/* Mobile Menu Icon Adjusts */
+
+.mobileMenuIcon{
+	width: 100%;
+	height: 100%;
+}
+
+.mobileMenuItemIcon{
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+}
+
+
+/* Mobile Menu Items Styles */
+
+.mobileMenuItem{
+	font-weight: 500 !important;
+	font-size: 10px !important;
+	line-height: 10px !important;
+	color: #E5E5E0 !important;
+	text-transform: uppercase !important;
+	margin: 4px 0px !important;
+	display: flex;
+	align-items: center;
+}
+
+
 /* Main Menu Changes */
 
+/* Changing the grid position for every item container */
+
+.charactersContainer{
+	@media (max-width: 1122px){
+    grid-column: 1;
+		grid-row: 1;
+  }
+}
+
+.moviesContainer{
+	@media (max-width: 1122px){
+    grid-column: 2;
+		grid-row: 1;
+  }
+}
+
+.planetsContainer{
+	@media (max-width: 1122px){
+    grid-column: 1;
+		grid-row: 2;
+  }
+}
+
+.speciesContainer{
+	@media (max-width: 1122px){
+    grid-column: 2;
+		grid-row: 2;
+  }
+}
 /* Changing main menu items background */
 
 .charactersBg{
 	background-image: url(${charactersMenuItemCover});
-	background-size: cover;
+	object-fit: cover;
 }
 
 .moviesBg{
 	background-image: url(${moviesMenuItemCover});
-	background-size: cover;
+	object-fit: cover;
 }
 
 .planetsBg{
 	background-image: url(${planetsMenuItemCover});
-	background-size: cover;
+	object-fit: cover;
 }
 
 .speciesBg{
 	background-image: url(${speciesMenuItemCover});
-	background-size: cover;
+	object-fit: cover;
 }
 
 /* Changing main menu items titles position so it can fit in the img div */
 
 .charactersItemTitle, .moviesItemTitle, .planetsItemTitle, .speciesItemTitle{
-	width: 120px;
+	width: 100%;
 	text-align: center;
 	display: block;
 	position: absolute;
-	bottom: 20px;
+	bottom: 1.25em;
 }
 `;
 export default GlobalStyle;

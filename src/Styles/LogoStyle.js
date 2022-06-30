@@ -1,20 +1,19 @@
 import styled from "styled-components";
+import TopAreaBg from "../Images/bodyBg.jfif";
 
 export const LogoStyle = styled.h1`
-  background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);
+  background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Oxanium', cursive, "Arial", sans-serif;
   font-weight: bold;
   font-size: 2.25em;
-  line-height: 1em;
+  line-height: 36px;
   letter-spacing: 10%;
   text-align: start;
   text-transform: uppercase;
-  margin-top: 53px;
-  margin-left: 103px;
-  flex-wrap: wrap;
+  margin: 30px;
 `;
 
 export const FooterLogoStyle = styled.h1`
@@ -25,10 +24,38 @@ export const FooterLogoStyle = styled.h1`
   font-family: 'Oxanium', cursive, "Arial", sans-serif;
   font-weight: bold;
   font-size: 2.25em;
-  line-height: 1em;
+  line-height: 36px;
   letter-spacing: 10%;
   text-align: end;
   text-transform: uppercase;
   flex-wrap: wrap;
-  margin: 28px 102px 0px 0px;
+  margin: 20px 30px 0px 30px;
+
+  @media (max-width: 606px){
+    font-size: 1.5em;
+    line-height: 26px;
+    align-self: flex-start;
+    text-align: start;
+  }
+`;
+
+export const MobileLogoContainer = styled.div`
+    background-image: url(${TopAreaBg});
+    background-size: cover;
+    background-repeat: no-repeat;
+`;
+
+export const MobileMenuLogoStyle = styled.h1`
+  background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Oxanium', cursive, "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 2.25em;
+  line-height: 36px;
+  letter-spacing: 10%;
+  text-align: start;
+  text-transform: uppercase;
+  padding: 30px;
 `;

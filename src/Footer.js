@@ -34,7 +34,7 @@ const Footer = () => {
     </ FooterMenuFlex>
     <FooterLogo />
   </ FooterContainer>
-  <FooterRights>Lucas Nobre & SWASCAN. 2022. Alguns direitos reservados</ FooterRights>
+  <FooterRights>Lucas Nobre. 2022. Some rights reserveds.</ FooterRights>
   </>
   );
 };

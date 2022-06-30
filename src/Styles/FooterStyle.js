@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import footerAreaBg from "../Images/footerBg.png"
+import croppedFooterAreaBg from "../Images/croppedFooterBg.png"
 
 export const FooterContainer = styled.footer`
   background-image: url(${footerAreaBg});
@@ -9,13 +10,26 @@ export const FooterContainer = styled.footer`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
+  @media (max-width: 606px){
+    background-image: url(${croppedFooterAreaBg});
+    max-width: 100%;
+    flex-flow: column wrap;
+    align-content: flex-start;
+  }
+
 `;
 
 export const FooterMenuFlex = styled.div`
   display: flex;
   flex-flow: row wrap;
-  gap: 30px;
-  margin: 28px 0px 28px 102px;
+  gap: 1.87em;
+  margin: 30px;
+
+  @media (max-width: 606px){
+    margin: 20px 30px;
+    order: 2;
+  }
 `;
 
 export const FooterMenuTitle = styled.h5`
@@ -24,7 +38,11 @@ export const FooterMenuTitle = styled.h5`
   font-size: 1em;
   color: #F1F1EB;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin: 10px 0px;
+
+  @media (max-width: 606px){
+    font-size: 0.62em;
+  }
 `;
 
 export const FooterMenuItem = styled.li`
@@ -33,28 +51,18 @@ export const FooterMenuItem = styled.li`
   font-size: 0.87em;
   color: #CFCFC9;
   margin-bottom: 4px;
+
+  @media (max-width: 606px){
+    font-size: 0.37em;
+  }
 `;
 
 export const FooterRights = styled.p`
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 0.62em;
-  padding: 4px;
+  padding: 10px;
   background-color: #040404;
   color: #CFCFC9;
   text-align: center;
-`;
-
-export const FooterLogo = styled.h1`
-  background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Oxanium', cursive, "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 2.25em;
-  line-height: 1em;
-  letter-spacing: 10%;
-  text-align: end;
-  text-transform: uppercase;
 `;

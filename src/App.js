@@ -16,8 +16,7 @@ const App = () => {
     <GlobalStyle />
     <Menu />
     <Routes>
-      <Route path='lnobrz.github.io/swascanapp/' element={<Home />}/>
-      <Route path='*' element={<NotFound />} />
+      <Route path='*' element={<Home />}/>
     </Routes>
     <Footer />
   </ BrowserRouter>);

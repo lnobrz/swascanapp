@@ -16,7 +16,8 @@ const App = () => {
     <GlobalStyle />
     <Menu />
     <Routes>
-      <Route path='*' element={<Home />}/>
+      <Route path='/swascanapp/' element={<Home />}/>
+      <Route path='*' element={<NotFound />} />
     </Routes>
     <Footer />
   </ BrowserRouter>);

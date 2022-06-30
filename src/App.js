@@ -16,7 +16,7 @@ const App = () => {
     <GlobalStyle />
     <Menu />
     <Routes>
-      <Route path='/swascanapp/' element={<Home />}/>
+      <Route path='lnobrz.github.io/swascanapp/' element={<Home />}/>
       <Route path='*' element={<NotFound />} />
     </Routes>
     <Footer />

@@ -4,7 +4,8 @@ import React from 'react';
 import { MainMenuTitle, MainMenuItemTitle, MainMenuContainer, MainMenuUl, MainMenuItemContainer, MainMenuItemImage, MainMenuNav} from './MainMenuStyles';
 
 const MainMenu = () => {
-  return (<MainMenuContainer>
+  return (
+    <MainMenuContainer>
     {document.documentElement.clientWidth > 606 ? 
     <MainMenuTitle>Pick<br />a<br />Cate<br />gory</MainMenuTitle>: 
     <MainMenuTitle>Pick a<br />Category</MainMenuTitle>}

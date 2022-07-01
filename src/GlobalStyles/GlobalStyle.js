@@ -93,6 +93,7 @@ table {
 /* Changing the grid position for every item container */
 
 .charactersContainer{
+
 	@media (max-width: 1122px){
     grid-column: 1;
 		grid-row: 1;
@@ -120,35 +121,31 @@ table {
   }
 }
 /* Changing main menu items background */
-
+.charactersBg, .moviesBg, .planetsBg, .speciesBg{
+	display: flex;
+	align-items: flex-end;
+	object-fit: cover;
+}
 .charactersBg{
 	background-image: url(${charactersMenuItemCover});
-	object-fit: cover;
 }
 
 .moviesBg{
 	background-image: url(${moviesMenuItemCover});
-	object-fit: cover;
 }
 
 .planetsBg{
 	background-image: url(${planetsMenuItemCover});
-	object-fit: cover;
 }
 
 .speciesBg{
 	background-image: url(${speciesMenuItemCover});
-	object-fit: cover;
 }
 
 /* Changing main menu items titles position so it can fit in the img div */
 
 .charactersItemTitle, .moviesItemTitle, .planetsItemTitle, .speciesItemTitle{
-	background-color: red;
-	width: 100%;
 	text-align: center;
-	position: absolute;
-	bottom: 0px;
 }
 `;
 export default GlobalStyle;

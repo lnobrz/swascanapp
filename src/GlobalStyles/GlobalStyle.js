@@ -73,7 +73,6 @@ table {
 	margin-right: 8px;
 }
 
-
 /* Mobile Menu Items Styles */
 
 .mobileMenuItem{

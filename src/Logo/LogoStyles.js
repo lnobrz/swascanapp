@@ -29,14 +29,7 @@ export const FooterLogoStyle = styled.h1`
   text-align: end;
   text-transform: uppercase;
   flex-wrap: wrap;
-  margin: 20px 30px 0px 30px;
-
-  @media (max-width: 606px){
-    font-size: 1.5em;
-    line-height: 26px;
-    align-self: flex-start;
-    text-align: start;
-  }
+  margin: 30px;
 `;
 
 export const MobileLogoContainer = styled.div`

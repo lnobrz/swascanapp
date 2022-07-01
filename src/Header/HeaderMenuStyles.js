@@ -16,7 +16,7 @@ export const MobileMenuNav = styled.nav`
     top: 0px;
     right: 0px;
     width: 37.5%;
-    height: 100vh;
+    height: 100%;
     z-index: 100;
     background-color: #040404;
     display: flex;

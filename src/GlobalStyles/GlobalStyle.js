@@ -121,6 +121,7 @@ table {
   }
 }
 /* Changing main menu items background */
+
 .charactersBg, .moviesBg, .planetsBg, .speciesBg{
 	display: flex;
 	align-items: flex-end;

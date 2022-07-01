@@ -13,7 +13,7 @@ export const MenuNav = styled.nav`
 
 export const MobileMenuNav = styled.nav`
     position: fixed;
-    overflow: hidden;
+    touch-action: none;
     top: 0px;
     right: 0px;
     width: 37.5%;

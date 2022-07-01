@@ -35,7 +35,6 @@ export const MobileOpenedMenu = (props) => {
     <MobileMenuNav>
       <MenuStyle>
         <MobileMenuContainer>
-        <MobileMenuTitle>Menu</MobileMenuTitle>
         <CloseMobileMenuButton onClick={props.clickFunction} id="btn">
          <img src={CloseMobileMenuButtonBg} alt="close menu icon"/>
         </CloseMobileMenuButton>

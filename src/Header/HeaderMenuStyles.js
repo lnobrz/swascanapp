@@ -47,21 +47,21 @@ export const MenuStyle = styled.ul`
 export const MobileMenuButton = styled.span`
   display: flex;
   flex-flow: row wrap;
+  padding: 0px 0px 20px 20px;
   width: 30px;
-  height: 15px;
+  height: 30px;
   margin: 30px;
 `
 
 export const MobileMenuContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: 30px;
 `;
 export const CloseMobileMenuButton = styled.span`
   width: 30px;
   height: 30px;
-  align-self: center;
 `;
 
 export const MobileMenuHr = styled.span`
@@ -69,18 +69,6 @@ export const MobileMenuHr = styled.span`
   height: 1px;
   background-color: #1B1A19;
   margin: 0px 10px;
-`;
-
-export const MobileMenuTitle = styled.h5`
-  font-family: "Oxanium", sans-serif;
-  background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 600;
-  font-size: 2em;
-  color: #1B1A19;
-  text-transform: uppercase;
 `;
 
 export const MenuItemsStyle = styled.li`

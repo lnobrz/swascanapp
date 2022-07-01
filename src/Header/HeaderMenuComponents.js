@@ -40,32 +40,42 @@ export const MobileOpenedMenu = (props) => {
          <img src={CloseMobileMenuButtonBg} alt="close menu icon"/>
         </CloseMobileMenuButton>
         </MobileMenuContainer>
-        <Link to="/" className='headerMenuLink'>
+        <Link to="/" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={homeIcon} alt="home menu icon" className='mobileMenuItemIcon'/>
              Home
           </ MenuItemsStyle>
         </Link>
+        <Link to="/" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={charactersIcon} alt="characters menu icon" className='mobileMenuItemIcon'/>
               Characters
           </ MenuItemsStyle>
+        </Link>
+        <Link to="/" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={moviesIcon} alt="movies menu icon" className='mobileMenuItemIcon'/>
               Movies
           </ MenuItemsStyle>
+        </Link>
+        <Link to="/" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={planetsIcon} alt="planets menu icon" className='mobileMenuItemIcon'/>
               Planets
           </ MenuItemsStyle>
+        </Link>
+        <Link to="/" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={speciesIcon} alt="species menu icon" className='mobileMenuItemIcon'/>
               Species
           </ MenuItemsStyle>
+        </Link>
+        <Link to="/" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={aboutIcon} alt="about menu icon" className='mobileMenuItemIcon'/>
               About
           </ MenuItemsStyle>
+        </Link>
     </ MenuStyle>
   </MobileMenuNav>
   </>

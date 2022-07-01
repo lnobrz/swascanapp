@@ -77,14 +77,27 @@ table {
 /* Mobile Menu Items Styles */
 
 .mobileMenuItem{
-	font-weight: 500 !important;
-	font-size: 10px !important;
+	font-weight: 400 !important;
+	font-size: 1em !important;
+	padding: 10px 0px;
 	line-height: 10px !important;
 	color: #E5E5E0 !important;
 	text-transform: uppercase !important;
 	margin: 4px 0px !important;
 	display: flex;
 	align-items: center;
+}
+
+.mobileHeaderMenuLink{
+	text-decoration: none;
+}
+.mobileHeaderMenuLink::after{
+	content: '';
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 1px;
+	background-color: #1B1A19;
 }
 
 

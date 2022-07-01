@@ -15,7 +15,7 @@ export const MobileMenuNav = styled.nav`
     position: fixed;
     top: 0px;
     right: 0px;
-    width: 37.5%;
+    width: 50%;
     height: 100vh;
     max-height: -webkit-fill-avaliable;
     z-index: 1;
@@ -59,8 +59,8 @@ export const MobileMenuContainer = styled.div`
   margin-bottom: 30px;
 `;
 export const CloseMobileMenuButton = styled.span`
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
   align-self: center;
 `;
 
@@ -72,9 +72,13 @@ export const MobileMenuHr = styled.span`
 `;
 
 export const MobileMenuTitle = styled.h5`
-  font-family: "Roboto", sans-serif;
-  font-weight: 800;
-  font-size: 15px;
+  font-family: "Oxanium", sans-serif;
+  background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 2em;
   color: #1B1A19;
   text-transform: uppercase;
 `;
@@ -83,7 +87,6 @@ export const MenuItemsStyle = styled.li`
   font-family: "Roboto", sans-serif;
   color: #E5E5E0;
   font-weight: 400;
-  font-size: 1em;
   line-height: 1.25em;
   letter-spacing: 10%;
   text-align: start;

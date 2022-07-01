@@ -13,11 +13,11 @@ export const MenuNav = styled.nav`
 
 export const MobileMenuNav = styled.nav`
     position: fixed;
-    touch-action: none;
     top: 0px;
     right: 0px;
     width: 37.5%;
-    height: 100%;
+    height: 100vh;
+    max-height: -webkit-fill-avaliable;
     z-index: 1;
     background-color: #040404;
     display: flex;

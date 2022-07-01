@@ -144,11 +144,11 @@ table {
 /* Changing main menu items titles position so it can fit in the img div */
 
 .charactersItemTitle, .moviesItemTitle, .planetsItemTitle, .speciesItemTitle{
+	background-color: red;
 	width: 100%;
 	text-align: center;
-	display: block;
 	position: absolute;
-	bottom: 1.25em;
+	bottom: 0px;
 }
 `;
 export default GlobalStyle;

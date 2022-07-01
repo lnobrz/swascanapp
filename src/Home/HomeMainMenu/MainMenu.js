@@ -11,20 +11,32 @@ const MainMenu = () => {
     <MainMenuNav>
       <MainMenuUl>
         <MainMenuItemContainer className='charactersContainer'>
-          <MainMenuItemImage className='charactersBg' />
-          <MainMenuItemTitle className='charactersItemTitle'>Characters</ MainMenuItemTitle>
+          <MainMenuItemImage className='charactersBg'>
+          <MainMenuItemTitle className='charactersItemTitle'>
+            Characters
+          </ MainMenuItemTitle>
+          </MainMenuItemImage>
         </ MainMenuItemContainer>
         <MainMenuItemContainer className='moviesContainer'>
-          <MainMenuItemImage className='moviesBg'/>
-          <MainMenuItemTitle className='moviesItemTitle'>Movies</ MainMenuItemTitle>
+          <MainMenuItemImage className='moviesBg'>
+          <MainMenuItemTitle className='moviesItemTitle'>
+            Movies
+          </ MainMenuItemTitle>
+          </MainMenuItemImage>
         </ MainMenuItemContainer>
         <MainMenuItemContainer className='planetsContainer'>
-          <MainMenuItemImage className='planetsBg'/>
-          <MainMenuItemTitle className='planetsItemTitle'>Planets</ MainMenuItemTitle>
+          <MainMenuItemImage className='planetsBg'>
+          <MainMenuItemTitle className='planetsItemTitle'>
+            Planets
+          </ MainMenuItemTitle>
+          </MainMenuItemImage>
         </ MainMenuItemContainer>
         <MainMenuItemContainer className='speciesContainer'>
-          <MainMenuItemImage className='speciesBg'/>
-          <MainMenuItemTitle className='speciesItemTitle'>Species</ MainMenuItemTitle>
+          <MainMenuItemImage className='speciesBg'>
+          <MainMenuItemTitle className='speciesItemTitle'>
+            Species
+          </ MainMenuItemTitle>
+          </MainMenuItemImage>
         </ MainMenuItemContainer>
      </ MainMenuUl>
     </ MainMenuNav>

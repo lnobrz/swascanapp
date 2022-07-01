@@ -13,11 +13,12 @@ export const MenuNav = styled.nav`
 
 export const MobileMenuNav = styled.nav`
     position: fixed;
+    overflow: hidden;
     top: 0px;
     right: 0px;
     width: 37.5%;
     height: 100%;
-    z-index: 100;
+    z-index: 1;
     background-color: #040404;
     display: flex;
     flex-flow: column wrap;

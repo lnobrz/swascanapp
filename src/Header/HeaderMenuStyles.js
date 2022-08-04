@@ -51,6 +51,7 @@ export const MobileMenuButton = styled.span`
   width: 30px;
   height: 30px;
   margin: 30px;
+  cursor: pointer;
 `
 
 export const MobileMenuContainer = styled.div`
@@ -62,6 +63,7 @@ export const MobileMenuContainer = styled.div`
 export const CloseMobileMenuButton = styled.span`
   width: 30px;
   height: 30px;
+  cursor: pointer;
 `;
 
 export const MobileMenuHr = styled.span`

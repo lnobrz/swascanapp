@@ -2,7 +2,7 @@ import styled from "styled-components";
 import TopAreaBg from "../Images/Backgrounds/bodyBg.jfif";
 
 export const LogoStyle = styled.h1`
-  background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);;
+  background: -webkit-linear-gradient(180deg, #FFFFFC 0%, #F9FC72 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

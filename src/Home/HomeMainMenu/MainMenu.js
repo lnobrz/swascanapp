@@ -4,11 +4,28 @@ import React from 'react';
 import { MainMenuTitle, MainMenuItemTitle, MainMenuContainer, MainMenuUl, MainMenuItemContainer, MainMenuItemImage, MainMenuNav} from './MainMenuStyles';
 
 const MainMenu = () => {
+
+  const tinyScreen = window.matchMedia('(max-width: 606px)').matches;
+  const [isSmallScreen, setIsSmallScreen] = React.useState(false);
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+  React.useLayoutEffect(() => {
+    const catchWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+      (windowWidth >= 606 ? setIsSmallScreen(false) : setIsSmallScreen(true));
+    }
+    window.addEventListener('resize', catchWindowWidth);
+
+    return window.removeEventListener('resize', catchWindowWidth);
+    
+  }, [windowWidth, isSmallScreen]);
+
   return (
-    <MainMenuContainer>
-    {document.documentElement.clientWidth > 606 ? 
-    <MainMenuTitle>Pick<br />a<br />Cate<br />gory</MainMenuTitle>: 
-    <MainMenuTitle>Pick a<br />Category</MainMenuTitle>}
+    <MainMenuContainer className='rowMainMenu'>
+    {tinyScreen || isSmallScreen ? 
+    <MainMenuTitle>Pick a<br />Category</MainMenuTitle>
+    : 
+    <MainMenuTitle>Pick<br />a<br />Cate<br />gory</MainMenuTitle>
+    }
     <MainMenuNav>
       <MainMenuUl>
         <MainMenuItemContainer className='charactersContainer'>

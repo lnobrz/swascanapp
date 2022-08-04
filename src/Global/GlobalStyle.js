@@ -102,6 +102,10 @@ table {
 
 /* Main Menu Changes */
 
+.rowMainMenu{
+	flex-flow: row wrap;
+};
+
 /* Changing the grid position for every item container */
 
 .charactersContainer{
@@ -160,5 +164,38 @@ table {
 .charactersItemTitle, .moviesItemTitle, .planetsItemTitle, .speciesItemTitle{
 	text-align: center;
 }
+
+/* Changing the characters, movies, planets and species menu styles */
+
+.showData{
+	flex-flow: column nowrap !important;
+}
+
+.showTitle{
+
+	text-align: center;
+
+	@media (max-width: 2000px) {
+    font-size: 4em !important;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 3em !important;
+  }
+
+  @media (max-width: 730px) {
+    font-size: 2em !important;
+  }
+
+  @media (max-width: 620px) {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+}
+
+.loading{
+	display: flex !important;
+}
 `;
+
 export default GlobalStyle;

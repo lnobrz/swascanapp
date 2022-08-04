@@ -1,6 +1,6 @@
 import React from 'react';
 import {Logo} from '../Logo/Logo';
-import mobileMenuButtonBg from "../Images/Icons/menuIcon.svg"
+import mobileMenuButtonBg from "../Images/Icons/menuIcon.svg";
 import CloseMobileMenuButtonBg from '../Images/Icons/closeMenuIcon.svg';
 import homeIcon from "../Images/Icons/homeIcon.svg";
 import charactersIcon from "../Images/Icons/charactersIcon.svg";
@@ -10,7 +10,7 @@ import speciesIcon from "../Images/Icons/speciesIcon.svg";
 import aboutIcon from "../Images/Icons/aboutIcon.svg";
 
 /* Header menu styled components import */
-import { MenuItemsStyle, MenuStyle, MobileMenuButton, MobileMenuNav, CloseMobileMenuButton, MobileMenuTitle, MobileMenuContainer, MenuNav} from '../Header/HeaderMenuStyles';
+import { MenuItemsStyle, MenuStyle, MobileMenuButton, MobileMenuNav, CloseMobileMenuButton, MobileMenuContainer, MenuNav} from '../Header/HeaderMenuStyles';
 import { Link } from 'react-router-dom';
 
 
@@ -19,11 +19,31 @@ export const DesktopMenu = () => {
     <MenuNav>
         < Logo />
         <MenuStyle>
-          <Link to="/" className='headerMenuLink'><MenuItemsStyle>Home</ MenuItemsStyle></Link>
-          <MenuItemsStyle>Characters</ MenuItemsStyle>
-          <MenuItemsStyle>Movies</ MenuItemsStyle>
-          <MenuItemsStyle>Planets</ MenuItemsStyle>
-          <MenuItemsStyle>Species</ MenuItemsStyle>
+          <Link to="/" className='headerMenuLink'>
+            <MenuItemsStyle>
+            Home
+            </ MenuItemsStyle>
+          </Link>
+          <Link to='/Characters' className='headerMenuLink'>
+          <MenuItemsStyle>
+              Characters
+          </ MenuItemsStyle>
+          </Link>
+          <Link to='/Movies' className='headerMenuLink'>
+            <MenuItemsStyle>
+              Movies
+            </ MenuItemsStyle>
+          </Link>
+          <Link to='/Planets' className='headerMenuLink'>
+          <MenuItemsStyle>
+            Planets
+          </ MenuItemsStyle>
+          </Link>
+          <Link to='/Species' className='headerMenuLink'>
+            <MenuItemsStyle>
+              Species
+            </ MenuItemsStyle>
+          </Link>
         </ MenuStyle>
       </MenuNav>
   )
@@ -45,25 +65,25 @@ export const MobileOpenedMenu = (props) => {
              Home
           </ MenuItemsStyle>
         </Link>
-        <Link to="/" className='mobileHeaderMenuLink'>
+        <Link to="/Characters" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={charactersIcon} alt="characters menu icon" className='mobileMenuItemIcon'/>
               Characters
           </ MenuItemsStyle>
         </Link>
-        <Link to="/" className='mobileHeaderMenuLink'>
+        <Link to="/Movies" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={moviesIcon} alt="movies menu icon" className='mobileMenuItemIcon'/>
               Movies
           </ MenuItemsStyle>
         </Link>
-        <Link to="/" className='mobileHeaderMenuLink'>
+        <Link to="/Planets" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={planetsIcon} alt="planets menu icon" className='mobileMenuItemIcon'/>
               Planets
           </ MenuItemsStyle>
         </Link>
-        <Link to="/" className='mobileHeaderMenuLink'>
+        <Link to="/Species" className='mobileHeaderMenuLink'>
           <MenuItemsStyle className={'mobileMenuItem'}>
             <img src={speciesIcon} alt="species menu icon" className='mobileMenuItemIcon'/>
               Species

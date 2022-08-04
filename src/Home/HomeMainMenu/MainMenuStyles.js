@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const MainMenuContainer = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   background-color: #040404;
   justify-content: space-between;
-  align-content: center;
   align-items: center;
 
   @media (max-width: 606px){
@@ -19,21 +18,17 @@ export const MainMenuContainer = styled.div`
 export const MainMenuTitle = styled.h5`
   font-family: 'Oxanium', cursive;
   text-transform: uppercase;
+  width: auto;
+  flex-grow: 1;
   font-weight: 800;
   font-size: 6em;
   letter-spacing: 0.01em;
   color: #1B1A19;
   margin: 30px;
+  display: flex;
+  flex-flow: column wrap;
 
   @media (max-width: 2000px) {
-    font-size: 5em;
-  }
-
-  @media (max-width: 1122px) {
-    font-size: 6em;
-  }
-
-  @media (max-width: 948px) {
     font-size: 5em;
   }
 
@@ -65,7 +60,7 @@ export const MainMenuNav = styled.nav`
   };
 `;
 
-export const MainMenuUl = styled.nav`
+export const MainMenuUl = styled.ul`
   display: flex;
   flex-flow: row wrap;
 

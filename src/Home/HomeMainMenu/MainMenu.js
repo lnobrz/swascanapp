@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /* Main menu styled components imports */
 import { MainMenuTitle, MainMenuItemTitle, MainMenuContainer, MainMenuUl, MainMenuItemContainer, MainMenuItemImage, MainMenuNav} from './MainMenuStyles';
@@ -28,34 +29,42 @@ const MainMenu = () => {
     }
     <MainMenuNav>
       <MainMenuUl>
-        <MainMenuItemContainer className='charactersContainer'>
-          <MainMenuItemImage className='charactersBg'>
-          <MainMenuItemTitle className='charactersItemTitle'>
-            Characters
-          </ MainMenuItemTitle>
-          </MainMenuItemImage>
-        </ MainMenuItemContainer>
-        <MainMenuItemContainer className='moviesContainer'>
-          <MainMenuItemImage className='moviesBg'>
-          <MainMenuItemTitle className='moviesItemTitle'>
-            Movies
-          </ MainMenuItemTitle>
-          </MainMenuItemImage>
-        </ MainMenuItemContainer>
-        <MainMenuItemContainer className='planetsContainer'>
-          <MainMenuItemImage className='planetsBg'>
-          <MainMenuItemTitle className='planetsItemTitle'>
-            Planets
-          </ MainMenuItemTitle>
-          </MainMenuItemImage>
-        </ MainMenuItemContainer>
-        <MainMenuItemContainer className='speciesContainer'>
-          <MainMenuItemImage className='speciesBg'>
-          <MainMenuItemTitle className='speciesItemTitle'>
-            Species
-          </ MainMenuItemTitle>
-          </MainMenuItemImage>
-        </ MainMenuItemContainer>
+          <Link to='/Characters'>
+            <MainMenuItemContainer className='charactersContainer'>
+              <MainMenuItemImage className='charactersBg'>
+              <MainMenuItemTitle className='charactersItemTitle'>
+                Characters
+              </ MainMenuItemTitle>
+              </MainMenuItemImage>
+            </ MainMenuItemContainer>
+          </Link>
+        <Link to='/Movies'>
+          <MainMenuItemContainer className='moviesContainer'>
+            <MainMenuItemImage className='moviesBg'>
+            <MainMenuItemTitle className='moviesItemTitle'>
+              Movies
+            </ MainMenuItemTitle>
+            </MainMenuItemImage>
+          </ MainMenuItemContainer>
+        </Link>
+        <Link to='/Planets'>
+          <MainMenuItemContainer className='planetsContainer'>
+            <MainMenuItemImage className='planetsBg'>
+            <MainMenuItemTitle className='planetsItemTitle'>
+              Planets
+            </ MainMenuItemTitle>
+            </MainMenuItemImage>
+          </ MainMenuItemContainer>
+        </Link>
+        <Link to='/Species'>
+          <MainMenuItemContainer className='speciesContainer'>
+            <MainMenuItemImage className='speciesBg'>
+            <MainMenuItemTitle className='speciesItemTitle'>
+              Species
+            </ MainMenuItemTitle>
+            </MainMenuItemImage>
+          </ MainMenuItemContainer>
+        </Link>
      </ MainMenuUl>
     </ MainMenuNav>
   </ MainMenuContainer>

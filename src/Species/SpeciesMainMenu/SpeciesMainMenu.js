@@ -58,16 +58,8 @@ const SpeciesMainMenu = () => {
       dataInfo6={globalVars.data.eye_colors}
       dataText7={"Average Lifespan: "}
       dataInfo7={globalVars.data.average_lifespan}
-      dataText8={"Homeworld: "}
-      dataInfo8={globalVars.data.homeworld}
-      dataText9={"Language: "}
-      dataInfo9={globalVars.data.language}
-      dataText10={"Residents: "}
-      dataInfoArray1={globalVars.data.people}
-      dataText11={"Films: "}
-      dataInfoArray2={globalVars.data.films}
-      dataText12={""}
-      dataInfoArray3={[]}
+      dataText8={"Language: "}
+      dataInfo8={globalVars.data.language}
       />
       </>
       :

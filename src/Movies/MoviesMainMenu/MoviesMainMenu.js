@@ -54,12 +54,6 @@ const MoviesMainMenu = () => {
       dataInfo5={globalVars.data.producer}
       dataText6={"Release Date: "}
       dataInfo6={globalVars.data.release_date}
-      dataText10={"Characters"}
-      dataInfoArray1={globalVars.data.characters}
-      dataText11={"Planets: "}
-      dataInfoArray2={globalVars.data.planets}
-      dataText12={"Species "}
-      dataInfoArray3={globalVars.data.species}
       />
       </>
       :

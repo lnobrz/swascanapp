@@ -76,7 +76,7 @@ export const ReadyDataMenu = ({apiBug, nameArray, getDataFunction}) => {
   );
 };
 
-export const ReadyMainContainer = ({showMenuVariable, dataArray, category, clickFunction, dataText1, dataText2, dataText3, dataText4, dataText5, dataText6, dataText7, dataText8, dataText9, dataText10, dataText11, dataText12, dataInfo1, dataInfo2, dataInfo3, dataInfo4, dataInfo5, dataInfo6, dataInfo7, dataInfo8, dataInfo9, dataInfoArray1, dataInfoArray2, dataInfoArray3}) => {
+export const ReadyMainContainer = ({showMenuVariable, dataArray, category, clickFunction, dataText1, dataText2, dataText3, dataText4, dataText5, dataText6, dataText7, dataText8, dataText9, dataInfo1, dataInfo2, dataInfo3, dataInfo4, dataInfo5, dataInfo6, dataInfo7, dataInfo8, dataInfo9}) => {
 
   return(
     <MainContainer>
@@ -97,9 +97,6 @@ export const ReadyMainContainer = ({showMenuVariable, dataArray, category, click
        <Data>{dataText7}<DataSpan>{dataInfo7}</DataSpan></Data>
        <Data>{dataText8}<DataSpan>{dataInfo8}</DataSpan></Data>
        <Data>{dataText9}<DataSpan>{dataInfo9}</DataSpan></Data>
-       <Data>{dataText10}<DataSpan>{[dataInfoArray1].map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
-       <Data>{dataText11}<DataSpan>{[dataInfoArray2].map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
-       <Data>{dataText12}<DataSpan>{[dataInfoArray3].map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
     </ul>
   </DataContainer>
   </MainContainer>

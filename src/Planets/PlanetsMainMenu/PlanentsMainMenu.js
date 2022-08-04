@@ -65,11 +65,6 @@ const PlanetsMainMenu = () => {
       dataText9={"Population: "}
       dataInfo9={globalVars.data.population}
       dataText10={"Residents: "}
-      dataInfoArray1={[globalVars.data.residents]}
-      dataText11={"Films: "}
-      dataInfoArray2={[globalVars.data.films]}
-      dataText12={""}
-      dataInfoArray3={[]}
       />
       </>
       :

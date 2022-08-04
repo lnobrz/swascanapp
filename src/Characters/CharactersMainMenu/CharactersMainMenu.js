@@ -53,26 +53,18 @@ const CharactersMainMenu = () => {
       dataInfo1={globalVars.data.name}
       dataText2={"Birth year: "}
       dataInfo2={globalVars.data.birth_year}
-      dataText3={"Homeworld: "}
-      dataInfo3={globalVars.data.homeworld}
-      dataText4={"Gender: "}
-      dataInfo4={globalVars.data.gender}
-      dataText5={"Height: "}
-      dataInfo5={globalVars.data.height}
-      dataText6={"Mass: "}
-      dataInfo6={globalVars.data.mass}
-      dataText7={"Eye Color: "}
-      dataInfo7={globalVars.data.eye_color}
-      dataText8={"Skin Color: "}
-      dataInfo8={globalVars.data.skin_color}
-      dataText9={"Hair Color: "}
-      dataInfo9={globalVars.data.hair_color}
-      dataText10={"Movies: "}
-      dataInfoArray1={globalVars.data.films}
-      dataText11={""}
-      dataInfoArray2={[]}
-      dataText12={""}
-      dataInfoArray3={[]}
+      dataText3={"Gender: "}
+      dataInfo3={globalVars.data.gender}
+      dataText4={"Height: "}
+      dataInfo4={globalVars.data.height}
+      dataText5={"Mass: "}
+      dataInfo5={globalVars.data.mass}
+      dataText6={"Eye Color: "}
+      dataInfo6={globalVars.data.eye_color}
+      dataText7={"Skin Color: "}
+      dataInfo7={globalVars.data.skin_color}
+      dataText8={"Hair Color: "}
+      dataInfo8={globalVars.data.hair_color}
       />
       </>
       :

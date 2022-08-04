@@ -97,9 +97,9 @@ export const ReadyMainContainer = ({showMenuVariable, dataArray, category, click
        <Data>{dataText7}<DataSpan>{dataInfo7}</DataSpan></Data>
        <Data>{dataText8}<DataSpan>{dataInfo8}</DataSpan></Data>
        <Data>{dataText9}<DataSpan>{dataInfo9}</DataSpan></Data>
-       <Data>{dataText10}<DataSpan>{dataInfoArray1.map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
-       <Data>{dataText11}<DataSpan>{dataInfoArray2.map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
-       <Data>{dataText12}<DataSpan>{dataInfoArray3.map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
+       <Data>{dataText10}<DataSpan>{[dataInfoArray1].map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
+       <Data>{dataText11}<DataSpan>{[dataInfoArray2].map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
+       <Data>{dataText12}<DataSpan>{[dataInfoArray3].map((item) => <p>{item}<br/></p>)}</DataSpan></Data>
     </ul>
   </DataContainer>
   </MainContainer>

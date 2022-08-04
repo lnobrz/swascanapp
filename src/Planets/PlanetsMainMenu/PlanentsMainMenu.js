@@ -8,7 +8,6 @@ const PlanetsMainMenu = () => {
   const globalVars = React.useContext(GlobalContext);
 
   React.useEffect(() => {
-    globalVars.setData(null);
     globalVars.setShowMenu(true);
   }, []);
 

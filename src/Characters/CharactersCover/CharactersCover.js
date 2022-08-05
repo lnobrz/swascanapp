@@ -1,18 +1,9 @@
 import React from 'react';
-
-/* Cover styled components import */
-import { CoverTitle, CoverText, CoverContainer } from '../../Home/HomeCover/CoverStyles';
+import {ReadyCover} from '../../Global/GlobalComponents';
 
 const CharactersCover = () => {
   return (
-  <CoverContainer>
-    <header>
-      <CoverTitle>Characters</ CoverTitle>
-    </header>
-    <CoverText>
-      Select a character in the bellow menu to read informations about them
-    </ CoverText>
-  </ CoverContainer>
+    <ReadyCover title={"Characters"} text={"Click on a character's name to read informations about them"}/>
 );
 };
 

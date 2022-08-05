@@ -1,18 +1,9 @@
 import React from 'react';
-
-/* Cover styled components import */
-import { CoverTitle, CoverText, CoverContainer } from '../../Home/HomeCover/CoverStyles';
+import {ReadyCover} from '../../Global/GlobalComponents';
 
 const PlanetsCover = () => {
   return (
-  <CoverContainer>
-    <header>
-      <CoverTitle>Planets</ CoverTitle>
-    </header>
-    <CoverText>
-      Scroll bellow to travel around the most incredibles planets in the whole universe. Just pick one in the menu bellow and have fun!
-    </ CoverText>
-  </ CoverContainer>
+  <ReadyCover title={"Planets"} text={"Take your seat inside this spaceship, 'cause now you will travell through all the planets of this universe"}/>
 );
 };
 

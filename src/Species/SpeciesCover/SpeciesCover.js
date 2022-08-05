@@ -1,18 +1,9 @@
 import React from 'react';
-
-/* Cover styled components import */
-import { CoverTitle, CoverText, CoverContainer } from '../../Home/HomeCover/CoverStyles';
+import {ReadyCover} from '../../Global/GlobalComponents';
 
 const SpeciesCover = () => {
   return (
-  <CoverContainer>
-    <header>
-      <CoverTitle>Species</ CoverTitle>
-    </header>
-    <CoverText>
-      Pick up your lightsaber and let's discover the most incredibles informations about all the species that lives in this universe
-    </ CoverText>
-  </ CoverContainer>
+    <ReadyCover title={"Species"} text={"To explore all the dozens of species of this universe, all you have to do is pick one bellow"}/>
 );
 };
 

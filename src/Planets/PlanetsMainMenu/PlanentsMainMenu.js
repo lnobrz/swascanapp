@@ -9,6 +9,7 @@ const PlanetsMainMenu = () => {
 
   React.useEffect(() => {
     globalVars.setShowMenu(true);
+    globalVars.setName(false);
   }, []);
 
   React.useEffect(() => getNamesArray([
@@ -28,6 +29,7 @@ const PlanetsMainMenu = () => {
   const json = await request.json();
   
   globalVars.setData(json);
+  globalVars.setShowMenu(globalVars.showMenu === true ? false : true);
   globalVars.setShowMenu(false);
 };
 
@@ -64,7 +66,14 @@ const PlanetsMainMenu = () => {
       dataInfo8={globalVars.data.surface_water}
       dataText9={"Population: "}
       dataInfo9={globalVars.data.population}
-      dataText10={"Residents: "}
+      dataText10={"Residents"}
+      dataInfoArray1={globalVars.data.residents}
+      dataText11={"Movies: "}
+      dataInfoArray2={globalVars.data.films}
+      dataText12={""}
+      dataInfoArray3={false}
+      dataText13={""}
+      dataInfoArray4={false}
       />
       </>
       :

@@ -9,6 +9,7 @@ const SpeciesMainMenu = () => {
 
   React.useEffect(() => {
     globalVars.setShowMenu(true);
+    globalVars.setName(false);
   }, []);
 
   React.useEffect(() => getNamesArray([
@@ -26,6 +27,7 @@ const SpeciesMainMenu = () => {
   const json = await request.json();
   
   globalVars.setData(json);
+  globalVars.setShowMenu(globalVars.showMenu === true ? false : true);
   globalVars.setShowMenu(false);
 };
 
@@ -60,6 +62,14 @@ const SpeciesMainMenu = () => {
       dataInfo7={globalVars.data.average_lifespan}
       dataText8={"Language: "}
       dataInfo8={globalVars.data.language}
+      dataText10={"Characters: "}
+      dataInfoArray1={globalVars.data.people}
+      dataText11={"Movies: "}
+      dataInfoArray2={globalVars.data.films}
+      dataText12={""}
+      dataInfoArray3={false}
+      dataText13={""}
+      dataInfoArray4={false}
       />
       </>
       :

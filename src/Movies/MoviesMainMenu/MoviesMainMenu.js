@@ -9,9 +9,9 @@ const MoviesMainMenu = () => {
 
   React.useEffect(() => {
     globalVars.setShowMenu(true);
+    globalVars.setName(false);
   }, []);
 
-  React.useState(() => console.log(`data: ${globalVars.data}`), [globalVars.data]);
   React.useEffect(() => getNamesArray([
     "https://swapi.dev/api/films/?page=1",
   ], globalVars.setName, "title"), [globalVars.setName]);
@@ -24,11 +24,12 @@ const MoviesMainMenu = () => {
   const json = await request.json();
   
   globalVars.setData(json);
+  globalVars.setShowMenu(globalVars.showMenu === true ? false : true);
   globalVars.setShowMenu(false);
 };
 
   const handleClick = () => {
-    globalVars.setShowMenu(!globalVars.showMenu);
+    globalVars.setShowMenu(true);
   };
 
   return(
@@ -54,6 +55,14 @@ const MoviesMainMenu = () => {
       dataInfo5={globalVars.data.producer}
       dataText6={"Release Date: "}
       dataInfo6={globalVars.data.release_date}
+      dataText10={"Characters: "}
+      dataInfoArray1={globalVars.data.characters}
+      dataText11={""}
+      dataInfoArray2={false}
+      dataText12={"Planets: "}
+      dataInfoArray3={globalVars.data.planets}
+      dataText13={"Species: "}
+      dataInfoArray4={globalVars.data.species}
       />
       </>
       :

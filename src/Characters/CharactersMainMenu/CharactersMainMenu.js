@@ -9,6 +9,7 @@ const CharactersMainMenu = () => {
   
   React.useEffect(() => {
     globalVars.setShowMenu(true);
+    globalVars.setName(false);
   }, []);
 
   React.useEffect(() => getNamesArray([
@@ -31,6 +32,7 @@ const CharactersMainMenu = () => {
     const json = await request.json();
   
     globalVars.setData(json);
+    globalVars.setShowMenu(globalVars.showMenu === true ? false : true);
     globalVars.setShowMenu(false);
   };
 
@@ -65,6 +67,14 @@ const CharactersMainMenu = () => {
       dataInfo7={globalVars.data.skin_color}
       dataText8={"Hair Color: "}
       dataInfo8={globalVars.data.hair_color}
+      dataText10={""}
+      dataInfoArray1={false}
+      dataText11={"Movies: "}
+      dataInfoArray2={globalVars.data.films}
+      dataText12={""}
+      dataInfoArray3={false}
+      dataText13={"Species: "}
+      dataInfoArray4={globalVars.data.species}
       />
       </>
       :

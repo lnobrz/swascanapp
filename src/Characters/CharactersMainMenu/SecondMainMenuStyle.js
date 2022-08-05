@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
 
@@ -13,6 +13,8 @@ export const MainContainer = styled.div`
 
 export const MenuContainer = styled.ul`
   display: grid;
+  max-height: 50vh;
+  overflow-y: auto;
   grid-template-columns: repeat(6, 1fr);
   margin: 30px;
   gap: 10px;
@@ -23,10 +25,6 @@ export const MenuContainer = styled.ul`
 
   @media (max-width: 700px) {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  @media (max-width: 606px) {
-    margin: 30px 0px;
   }
 
   @media (max-width: 560px) {
@@ -43,30 +41,14 @@ export const MenuContainer = styled.ul`
 `;
 
 export const DataMenu = styled.ul`
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  max-height: 30vh;
+  overflow-x: auto !important;
+  display: flex;
+  flex-flow: row wrap;
   gap: 10px;
   margin: 30px;
-
-  @media (max-width: 1040px){
-    grid-template-columns: repeat(7, 1fr);
-  }
-
-  @media (max-width: 940px){
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  @media (max-width: 780px){
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  @media (max-width: 744px){
-    display: flex;
-    flex-flow: row nowrap;
-    overflow-x: scroll;
-    justify-content: flex-start;
-  }
+  justify-content: center;
+  align-content: space-between;
 `;
 
 export const DataMenuItem = styled.li`
@@ -117,7 +99,7 @@ export const DataContainer = styled.div`
   display: flex;
   flex-flow: row-reverse wrap;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
   margin: 30px;
   height: auto;
   background-color: #0B0B0A;
@@ -125,7 +107,6 @@ export const DataContainer = styled.div`
   
   @media (max-width: 620px) {
     flex-flow: column wrap;
-    width: 80%;
     align-items: flex-end;
   }
 `;
@@ -151,6 +132,6 @@ export const Data = styled.li`
   }
 `;
 
-export const DataSpan = styled.span`
+export const DataDiv = styled.div`
   color: #CFCFC9;
 `;

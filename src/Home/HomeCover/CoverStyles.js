@@ -34,6 +34,8 @@ export const CoverTitle = styled.h2`
 `;
 
 export const CoverText = styled.p`
+  display: flex;
+  align-items: center;
   max-width: 580px;
   background-color: #050505;
   height: 75px;
@@ -44,8 +46,6 @@ export const CoverText = styled.p`
   line-height: 1.56em;
   letter-spacing: 5%;
   color: #CFCFC9;
-  text-align: end;
-  align-content: center;
   margin: 0px 30px 30px 30px;
 
   @media (max-width: 780px){
@@ -56,6 +56,5 @@ export const CoverText = styled.p`
   @media (max-width: 680px){
     width: auto;
     height: auto;
-    text-align: center;
   }
   `;

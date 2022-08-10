@@ -2,14 +2,13 @@ import React from 'react';
 import { MobileMenuLogo } from '../Logo/Logo';
 import {DesktopMenu, MobileClosedMenu, MobileOpenedMenu} from './HeaderMenuComponents';
 import { makeResponsible } from '../Global/GlobalComponents';
+import { GlobalContext } from '../Global/GlobalComponents';
 
 const Menu = () => {
 
-  const mobile = window.matchMedia('(max-width: 744px)').matches;
-  const [isMobile, setIsMobile] = React.useState(false);
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+  const globalVars = React.useContext(GlobalContext);
 
-  React.useLayoutEffect(() => {makeResponsible(setWindowWidth, windowWidth, setIsMobile)}, [isMobile, windowWidth]);
+  React.useLayoutEffect(() => {makeResponsible(globalVars.setIsMobile)}, [globalVars.setIsMobile]);
 
   const [openedMenu, setOpenedMenu] = React.useState(false);
 
@@ -32,7 +31,7 @@ const Menu = () => {
   })
 
   return(
-    (mobile && isMobile === true ?
+    (globalVars.mobile && globalVars.isMobile === true ?
           
     (openedMenu === true ?
       <>

@@ -14,7 +14,6 @@ export const MainContainer = styled.div`
 export const MenuContainer = styled.ul`
   display: grid;
   max-height: 50vh;
-  overflow-y: auto;
   grid-template-columns: repeat(6, 1fr);
   margin: 30px;
   gap: 10px;
@@ -42,7 +41,6 @@ export const MenuContainer = styled.ul`
 
 export const DataMenu = styled.ul`
   max-height: 30vh;
-  overflow-x: auto !important;
   display: flex;
   flex-flow: row wrap;
   gap: 10px;

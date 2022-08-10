@@ -1,7 +1,24 @@
 import React from "react";
-import { CoverTitle, CoverText, CoverContainer } from '../Home/HomeCover/CoverStyles';
+import { 
+  CoverTitle, 
+  CoverText, 
+  CoverContainer 
+} 
+from '../Home/HomeCover/CoverStyles';
 import { MainMenuTitle } from "../Home/HomeMainMenu/MainMenuStyles";
-import { DataMenu, DataMenuItem, MenuItemDecoration, MenuItemTitle, MainContainer, DataContainer, Data, DataDiv, MenuContainer, MenuItem } from "../Characters/CharactersMainMenu/SecondMainMenuStyle";
+import { 
+  DataMenu, 
+  DataMenuItem, 
+  MenuItemDecoration, 
+  MenuItemTitle, 
+  MainContainer, 
+  DataContainer, 
+  Data, 
+  DataDiv, 
+  MenuContainer, 
+  MenuItem 
+} 
+from "./SecondMainMenuStyle";
 import {CloseMobileMenuButton} from "../Header/HeaderMenuStyles";
 import closeMobileMenuButtonBg from "../Images/Icons/closeMenuIcon.svg";
 
@@ -18,13 +35,29 @@ export const GlobalStorage = ({children}) => {
   const [data, setData] = React.useState(null);
 
   return(
-    <GlobalContext.Provider value={{mobile, isMobile, setIsMobile, windowWidth, setWindowWidth, showMenu, setShowMenu, name, setName, data, setData}}>{children}
+    <GlobalContext.Provider value={{
+      mobile, 
+      isMobile, 
+      setIsMobile, 
+      windowWidth, 
+      setWindowWidth, 
+      showMenu, 
+      setShowMenu, 
+      name, 
+      setName, 
+      data, 
+      setData}}>
+        {children}
     </GlobalContext.Provider>
   )
 };
 
 /* use with useEffect */
-export const getNamesArray = (pagesArray, stateVariable, category) => {
+export const getNamesArray = (
+  pagesArray, 
+  stateVariable, 
+  category
+) => {
 
   const makeRequest = async () => {
   const jsonRequest = await Promise.all(pagesArray.map(async(item) => await (await fetch(item)).json()));
@@ -39,19 +72,40 @@ makeRequest();
 };
 
 /* use with useLayoutEffect */
-export const makeResponsible = ((windowWidthSetter, windowWidth, isMobileSetter) => {
+export const makeResponsible = ((isMobileSetter) => {
 
   const catchWindowWidth = () => {
-    windowWidthSetter(window.innerWidth);
-    (windowWidth >= 746 ? isMobileSetter(false) : isMobileSetter(true));
+    window.innerWidth >= 746 ? isMobileSetter(false) : isMobileSetter(true);
   };
 
-  window.addEventListener('resize', catchWindowWidth);
-
-  return () => {
-    document.removeEventListener('resize', catchWindowWidth);
-  };
+  return(
+    window.addEventListener('resize', catchWindowWidth)
+  );
 });
+
+/* Global Functions */
+
+export const clickOnMenuItemFunction = (showMenuSetter) => {
+  showMenuSetter(false);
+};
+
+export const getDataFunction = async (
+  eventTargetVar, 
+  category, 
+  dataSetter, 
+  showMenuSetter, 
+  showMenuVar
+  ) => 
+  
+  {
+  const itemId = eventTargetVar;
+  const request = await fetch (`https://swapi.dev/api/${category}/${itemId}/`);
+  const json = await request.json();
+
+  dataSetter(json);
+  showMenuSetter(showMenuVar === true ? false : true);
+  showMenuSetter(false);
+};
 
 /* styled components ready for use */
 
@@ -68,10 +122,18 @@ export const ReadyCover = ({title, text}) => {
   )
 };
 
-export const ReadyDataMenu = ({apiBug, nameArray, getDataFunction}) => {
+export const ReadyDataMenu = ({
+  dataVar,
+  apiBug, 
+  nameArray, 
+  getDataFunction,
+  loaderComponent
+}) => {
 
   return(
-    <DataMenu>
+    <DataMenu 
+    style={dataVar === null ? {overflowX: "hidden"} : {overflowX: "auto"}}
+    >
       {nameArray.map((item) => {
         return(
           <DataMenuItem 
@@ -90,7 +152,38 @@ export const ReadyDataMenu = ({apiBug, nameArray, getDataFunction}) => {
   );
 };
 
-export const ReadyMainContainer = ({showMenuVariable, dataArray, category, clickFunction, dataText1, dataText2, dataText3, dataText4, dataText5, dataText6, dataText7, dataText8, dataText9, dataText10, dataText11, dataText12, dataText13, dataInfo1, dataInfo2, dataInfo3, dataInfo4, dataInfo5, dataInfo6, dataInfo7, dataInfo8, dataInfo9, dataInfoArray1, dataInfoArray2, dataInfoArray3, dataInfoArray4}) => {
+export const ReadyMainContainer = ({
+  showMenuVariable, 
+  dataArray, 
+  category, 
+  clickFunction, 
+  dataText1, 
+  dataText2, 
+  dataText3, 
+  dataText4, 
+  dataText5, 
+  dataText6, 
+  dataText7, 
+  dataText8, 
+  dataText9, 
+  dataText10, 
+  dataText11, 
+  dataText12, 
+  dataText13, 
+  dataInfo1, 
+  dataInfo2, 
+  dataInfo3, 
+  dataInfo4, 
+  dataInfo5, 
+  dataInfo6, 
+  dataInfo7, 
+  dataInfo8, 
+  dataInfo9, 
+  dataInfoArray1, 
+  dataInfoArray2, 
+  dataInfoArray3, 
+  dataInfoArray4
+}) => {
 
   const [charactersData, setCharactersData] = React.useState(null);
   const [filmsData, setFilmsData] = React.useState(null);
@@ -142,7 +235,12 @@ export const ReadyMainContainer = ({showMenuVariable, dataArray, category, click
   );
 };
 
-export const ReadyMainMenuTitle = ({screenWidthVariable1, screenWidthVariable2, categoryTitle}) => {
+export const ReadyMainMenuTitle = ({
+  screenWidthVariable1, 
+  screenWidthVariable2, 
+  categoryTitle
+}) => {
+
   return(
     ({screenWidthVariable1} || {screenWidthVariable2}) === true ? 
       <MainMenuTitle>Pick a<br />{categoryTitle}</MainMenuTitle>
@@ -151,19 +249,24 @@ export const ReadyMainMenuTitle = ({screenWidthVariable1, screenWidthVariable2, 
   )
 }
 
-export const ReadyMenuContainer = ({apiBug, nameVariable, getDataFunction}) => {
+export const ReadyMenuContainer = ({
+  apiBug, 
+  nameVariable, 
+  getDataFunction
+}) => {
   
   return(
-    <MenuContainer className={nameVariable === false ? 'loading' : ''}>
+    <MenuContainer className={nameVariable === false ? 'loading' : ''} 
+    style={nameVariable === false ? {overflowX: "visible"} : {overflowX: "auto"}}>
        
        {(nameVariable === false) ? 
        <MenuItemTitle>
            loading...
       </MenuItemTitle>
        : 
-       nameVariable.map((item) => {
+       nameVariable.map((item, index) => {
            return(
-           <MenuItem id={(apiBug === false) ?  `${parseInt(nameVariable.indexOf(item) + 1)}` : (nameVariable.indexOf(item)  <= 15) ? `${parseInt(nameVariable.indexOf(item) + 1)}` : `${parseInt(nameVariable.indexOf(item) + 2)}`} 
+           <MenuItem key={index} id={(apiBug === false) ?  `${parseInt(nameVariable.indexOf(item) + 1)}` : (nameVariable.indexOf(item)  <= 15) ? `${parseInt(nameVariable.indexOf(item) + 1)}` : `${parseInt(nameVariable.indexOf(item) + 2)}`} 
            onClick={getDataFunction}>
            <MenuItemDecoration/>
            <MenuItemTitle>

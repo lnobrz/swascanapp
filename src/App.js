@@ -22,12 +22,30 @@ const App = () => {
     <GlobalStorage>
     <Menu />
     <Routes>
-      <Route path='/' element={<Home />}/>
-      <Route path='/Characters' element={<Characters />}/>
-      <Route path='/Movies' element={<Movies />}/>
-      <Route path='/Planets' element={<Planets />}/>
-      <Route path='/Species' element={<Species />}/>
-      <Route path='*' element={<NotFound />} />
+      <Route 
+      path='/' 
+      element={<Home />}
+      />
+      <Route 
+      path='/Characters' 
+      element={<Characters />}
+      />
+      <Route 
+      path='/Movies' 
+      element={<Movies />}
+      />
+      <Route 
+      path='/Planets' 
+      element={<Planets />}
+      />
+      <Route 
+      path='/Species' 
+      element={<Species />}
+      />
+      <Route 
+      path='*' 
+      element={<NotFound />} 
+      />
     </Routes>
     <Footer />
     </ GlobalStorage>

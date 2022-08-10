@@ -1,7 +1,17 @@
 import React from "react";
 import { MainMenuContainer } from "../../Home/HomeMainMenu/MainMenuStyles";
 import { GlobalContext } from "../../Global/GlobalComponents";
-import { getNamesArray, makeResponsible, ReadyDataMenu, ReadyMainContainer, ReadyMenuContainer, ReadyMainMenuTitle,} from "../../Global/GlobalComponents";
+import { 
+  getNamesArray, 
+  makeResponsible, 
+  ReadyDataMenu, 
+  ReadyMainContainer, 
+  ReadyMenuContainer, 
+  ReadyMainMenuTitle,
+  clickOnMenuItemFunction, 
+  getDataFunction
+} 
+from "../../Global/GlobalComponents";
 
 const PlanetsMainMenu = () => {
 
@@ -19,35 +29,56 @@ const PlanetsMainMenu = () => {
     "https://swapi.dev/api/planets/?page=4",
     "https://swapi.dev/api/planets/?page=5",
     "https://swapi.dev/api/planets/?page=6",
-  ], globalVars.setName, "name"), [globalVars.setName]);
+  ], 
+  globalVars.setName, 
+  "name"), 
+  
+  [globalVars.setName]);
 
-  React.useLayoutEffect(() => {makeResponsible(globalVars.setWindowWidth, globalVars.windowWidth, globalVars.setIsMobile)}, [globalVars.isMobile, globalVars.setIsMobile, globalVars.windowWidth, globalVars.setWindowWidth]);
+  React.useLayoutEffect(() => {makeResponsible(
+    globalVars.setWindowWidth, 
+    globalVars.windowWidth, 
+    globalVars.setIsMobile)}, 
+    
+    [
+      globalVars.isMobile, 
+      globalVars.setIsMobile, 
+      globalVars.windowWidth, 
+      globalVars.setWindowWidth
+    ]);
   
   const getData = async (event) => {
+
   const itemId = event.currentTarget.id;
-  const request = await fetch (`https://swapi.dev/api/planets/${itemId}/`);
-  const json = await request.json();
-  
-  globalVars.setData(json);
-  globalVars.setShowMenu(globalVars.showMenu === true ? false : true);
-  globalVars.setShowMenu(false);
+
+  getDataFunction(
+    itemId, 
+    'planets', 
+    globalVars.setData, 
+    globalVars.setShowMenu, 
+    globalVars.showMenu
+  );
 };
 
-  const handleClick = () => {
-    globalVars.setShowMenu(!globalVars.showMenu);
-  };
-
   return(
-    <MainMenuContainer className={globalVars.showMenu === false ? "showData" : ""}>
+    <MainMenuContainer 
+    className={globalVars.showMenu === false ? "showData" : ""}
+    >
       
       {globalVars.showMenu === false ?
       <>
-      <ReadyDataMenu apiBug={false} nameArray={globalVars.name} getDataFunction={getData} clickFunction={handleClick}/>
+      <ReadyDataMenu 
+      dataVar={globalVars.data}
+      apiBug={false} 
+      nameArray={globalVars.name} 
+      getDataFunction={getData} 
+      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
+      />
       <ReadyMainContainer 
       showMenuVariable={globalVars.showMenu}
       dataArray={globalVars.data}
       category={"name"}
-      clickFunction={handleClick}
+      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
       dataText1={"Name: "}
       dataInfo1={globalVars.data.name}
       dataText2={"Rotation Period: "}
@@ -78,8 +109,16 @@ const PlanetsMainMenu = () => {
       </>
       :
       <>
-      <ReadyMainMenuTitle screenWidthVariable1={globalVars.mobile} screenWidthVariable2={globalVars.isMobile} categoryTitle="Planet"/>
-      <ReadyMenuContainer apiBug={false} nameVariable={globalVars.name} getDataFunction={getData}/>
+      <ReadyMainMenuTitle 
+      screenWidthVariable1={globalVars.mobile} 
+      screenWidthVariable2={globalVars.isMobile} 
+      categoryTitle="Planet"
+      />
+      <ReadyMenuContainer 
+      apiBug={false} 
+      nameVariable={globalVars.name} 
+      getDataFunction={getData}
+      />
       </>}
     </MainMenuContainer>
   )

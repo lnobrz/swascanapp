@@ -1,7 +1,16 @@
 import React from "react";
 import { MainMenuContainer } from "../../Home/HomeMainMenu/MainMenuStyles";
 import { GlobalContext } from "../../Global/GlobalComponents";
-import { getNamesArray, makeResponsible, ReadyDataMenu, ReadyMainContainer, ReadyMenuContainer, ReadyMainMenuTitle,} from "../../Global/GlobalComponents";
+import { 
+  getNamesArray, 
+  makeResponsible, 
+  ReadyDataMenu, 
+  ReadyMainContainer, 
+  ReadyMenuContainer, 
+  ReadyMainMenuTitle, 
+  clickOnMenuItemFunction, 
+  getDataFunction} 
+  from "../../Global/GlobalComponents";
 
 const SpeciesMainMenu = () => {
 
@@ -17,35 +26,56 @@ const SpeciesMainMenu = () => {
     "https://swapi.dev/api/species/?page=2",
     "https://swapi.dev/api/species/?page=3",
     "https://swapi.dev/api/species/?page=4",
-  ], globalVars.setName, "name"), [globalVars.setName]);
+  ], globalVars.setName
+  , "name"), 
 
-  React.useLayoutEffect(() => {makeResponsible(globalVars.setWindowWidth, globalVars.windowWidth, globalVars.setIsMobile)}, [globalVars.isMobile, globalVars.setIsMobile, globalVars.windowWidth, globalVars.setWindowWidth]);
+  [globalVars.setName]);
+
+  React.useLayoutEffect(() => {makeResponsible(
+    globalVars.setWindowWidth, 
+    globalVars.windowWidth, 
+    globalVars.setIsMobile)}, 
+    
+    [
+      globalVars.isMobile, 
+      globalVars.setIsMobile, 
+      globalVars.windowWidth, 
+      globalVars.setWindowWidth
+  ]);
 
   const getData = async (event) => {
-  const itemId = event.currentTarget.id;
-  const request = await fetch (`https://swapi.dev/api/species/${itemId}/`);
-  const json = await request.json();
   
-  globalVars.setData(json);
-  globalVars.setShowMenu(globalVars.showMenu === true ? false : true);
-  globalVars.setShowMenu(false);
+  const itemId = event.currentTarget.id;
+
+  getDataFunction(
+    itemId, 
+    'people', 
+    globalVars.setData, 
+    globalVars.setShowMenu, 
+    globalVars.showMenu);
 };
 
-  const handleClick = () => {
-    globalVars.setShowMenu(!globalVars.showMenu);
-  };
-
   return(
-    <MainMenuContainer className={globalVars.showMenu === false ? "showData" : ""}>
+    <MainMenuContainer 
+    className={globalVars.showMenu === false ? "showData" : ""}
+    >
       
       {globalVars.showMenu === false ?
+      
       <>
-      <ReadyDataMenu apiBug={false} nameArray={globalVars.name} getDataFunction={getData} clickFunction={handleClick}/>
+      <ReadyDataMenu 
+      dataVar={globalVars.data}
+      apiBug={false} 
+      nameArray={globalVars.name} 
+      getDataFunction={getData} 
+      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
+      />
+
       <ReadyMainContainer 
       showMenuVariable={globalVars.showMenu}
       dataArray={globalVars.data}
       category={"name"}
-      clickFunction={handleClick}
+      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
       dataText1={"Name: "}
       dataInfo1={globalVars.data.name}
       dataText2={"Classification: "}
@@ -74,8 +104,17 @@ const SpeciesMainMenu = () => {
       </>
       :
       <>
-      <ReadyMainMenuTitle screenWidthVariable1={globalVars.mobile} screenWidthVariable2={globalVars.isMobile} categoryTitle="Specie"/>
-      <ReadyMenuContainer apiBug={false} nameVariable={globalVars.name} getDataFunction={getData}/>
+      <ReadyMainMenuTitle 
+      screenWidthVariable1={globalVars.mobile} 
+      screenWidthVariable2={globalVars.isMobile} 
+      categoryTitle="Specie"
+      />
+
+      <ReadyMenuContainer 
+      apiBug={false} 
+      nameVariable={globalVars.name} 
+      getDataFunction={getData}
+      />
       </>}
     </MainMenuContainer>
   )

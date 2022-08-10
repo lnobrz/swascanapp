@@ -22,16 +22,6 @@ export const MobileMenuNav = styled.nav`
     background-color: #040404;
     display: flex;
     flex-flow: column wrap;
-    transition: all .5s;
-    animation-name: openingMenu;
-    animation-duration: 0.2s;
-    animation-timing-function: linear;
-    transform-origin: right;
-
-   @keyframes openingMenu {
-    from{transform: scaleX(95%)}
-    to{transform: scaleX(100%)}
-   }
 `;
 
 export const MenuStyle = styled.ul`

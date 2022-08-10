@@ -1,7 +1,17 @@
 import React from "react";
 import { MainMenuContainer } from "../../Home/HomeMainMenu/MainMenuStyles";
 import { GlobalContext } from "../../Global/GlobalComponents";
-import { getNamesArray, makeResponsible, ReadyDataMenu, ReadyMainContainer, ReadyMenuContainer, ReadyMainMenuTitle,} from "../../Global/GlobalComponents";
+import { 
+  getNamesArray, 
+  makeResponsible, 
+  ReadyDataMenu, 
+  ReadyMainContainer, 
+  ReadyMenuContainer, 
+  ReadyMainMenuTitle,
+  clickOnMenuItemFunction, 
+  getDataFunction 
+} 
+from "../../Global/GlobalComponents";
 
 const MoviesMainMenu = () => {
 
@@ -14,35 +24,57 @@ const MoviesMainMenu = () => {
 
   React.useEffect(() => getNamesArray([
     "https://swapi.dev/api/films/?page=1",
-  ], globalVars.setName, "title"), [globalVars.setName]);
+  ], 
+  globalVars.setName, 
+  "title"
+  ), 
+  
+  [globalVars.setName]);
 
-  React.useLayoutEffect(() => {makeResponsible(globalVars.setWindowWidth, globalVars.windowWidth, globalVars.setIsMobile)}, [globalVars.isMobile, globalVars.setIsMobile, globalVars.windowWidth, globalVars.setWindowWidth]);
+  React.useLayoutEffect(() => {makeResponsible(
+    globalVars.setWindowWidth, 
+    globalVars.windowWidth, 
+    globalVars.setIsMobile)}, 
+    
+    [
+      globalVars.isMobile, 
+      globalVars.setIsMobile, 
+      globalVars.windowWidth, 
+      globalVars.setWindowWidth
+    ]);
   
   const getData = async (event) => {
-  const itemId = event.currentTarget.id;
-  const request = await fetch (`https://swapi.dev/api/films/${itemId}/`);
-  const json = await request.json();
   
-  globalVars.setData(json);
-  globalVars.setShowMenu(globalVars.showMenu === true ? false : true);
-  globalVars.setShowMenu(false);
+    const itemId = event.currentTarget.id;
+  
+    getDataFunction(
+      itemId, 
+      'films', 
+      globalVars.setData, 
+      globalVars.setShowMenu, 
+      globalVars.showMenu
+    );
 };
 
-  const handleClick = () => {
-    globalVars.setShowMenu(true);
-  };
-
   return(
-    <MainMenuContainer className={globalVars.showMenu === false ? "showData" : ""}>
+    <MainMenuContainer 
+    className={globalVars.showMenu === false ? "showData" : ""}
+    >
       
       {globalVars.showMenu === false ?
       <>
-      <ReadyDataMenu apiBug={false} nameArray={globalVars.name} getDataFunction={getData} clickFunction={handleClick}/>
+      <ReadyDataMenu
+      dataVar={globalVars.data}
+      apiBug={false} 
+      nameArray={globalVars.name} 
+      getDataFunction={getData} 
+      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
+      />
       <ReadyMainContainer 
       showMenuVariable={globalVars.showMenu}
       dataArray={globalVars.data}
       category={"title"}
-      clickFunction={handleClick}
+      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
       dataText1={"Title: "}
       dataInfo1={globalVars.data.title}
       dataText2={"Episode ID: "}
@@ -67,8 +99,15 @@ const MoviesMainMenu = () => {
       </>
       :
       <>
-      <ReadyMainMenuTitle screenWidthVariable1={globalVars.mobile} screenWidthVariable2={globalVars.isMobile} categoryTitle="Movie"/>
-      <ReadyMenuContainer apiBug={false} nameVariable={globalVars.name} getDataFunction={getData}/>
+      <ReadyMainMenuTitle 
+      screenWidthVariable1={globalVars.mobile} 
+      screenWidthVariable2={globalVars.isMobile} 
+      categoryTitle="Movie"
+      />
+      <ReadyMenuContainer 
+      apiBug={false} 
+      nameVariable={globalVars.name} 
+      getDataFunction={getData}/>
       </>}
     </MainMenuContainer>
   )

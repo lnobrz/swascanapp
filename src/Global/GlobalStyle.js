@@ -109,6 +109,10 @@ table {
 /* Changing the grid position for every item container */
 
 .charactersContainer{
+	&:hover{
+		cursor: pointer;
+		opacity: 0.5;
+	}
 
 	@media (max-width: 1122px){
     grid-column: 1;
@@ -117,6 +121,11 @@ table {
 }
 
 .moviesContainer{
+	&:hover{
+		cursor: pointer;
+		opacity: 0.5;
+	}
+
 	@media (max-width: 1122px){
     grid-column: 2;
 		grid-row: 1;
@@ -124,6 +133,11 @@ table {
 }
 
 .planetsContainer{
+	&:hover{
+		cursor: pointer;
+		opacity: 0.5;
+	}
+
 	@media (max-width: 1122px){
     grid-column: 1;
 		grid-row: 2;
@@ -131,6 +145,11 @@ table {
 }
 
 .speciesContainer{
+	&:hover{
+		cursor: pointer;
+		opacity: 0.5;
+	}
+
 	@media (max-width: 1122px){
     grid-column: 2;
 		grid-row: 2;
@@ -143,6 +162,7 @@ table {
 	align-items: flex-end;
 	object-fit: cover;
 }
+
 .charactersBg{
 	background-image: url(${charactersMenuItemCover});
 }

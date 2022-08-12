@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainMenuContainer = styled.div`
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   background-color: #040404;
   justify-content: space-between;
   align-items: center;

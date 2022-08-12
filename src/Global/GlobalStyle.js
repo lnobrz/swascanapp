@@ -103,7 +103,7 @@ table {
 /* Main Menu Changes */
 
 .rowMainMenu{
-	flex-flow: row wrap;
+	flex-flow: row wrap !important;
 };
 
 /* Changing the grid position for every item container */

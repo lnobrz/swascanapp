@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/swascanapp/static/js/main.898906db.js",
+    "static/media/moviesCover.jpg": "/swascanapp/static/media/moviesCover.83fbe543c6a0b328e010.jpg",
+    "static/media/charactersCover.jpg": "/swascanapp/static/media/charactersCover.96533a2dbfb1ee5e2d4f.jpg",
+    "static/media/footerBg.png": "/swascanapp/static/media/footerBg.e02f3071284c60d9e0b9.png",
+    "static/media/croppedFooterBg.png": "/swascanapp/static/media/croppedFooterBg.ca3e58ebfcb0541b5f84.png",
+    "static/media/bodyBg.jfif": "/swascanapp/static/media/bodyBg.e242ff48f30c05388762.jfif",
+    "static/media/speciesCover.jpg": "/swascanapp/static/media/speciesCover.c4b6409b61ef8aff32e2.jpg",
+    "static/media/planetsCover.jpg": "/swascanapp/static/media/planetsCover.5face35638da4a6f9fb0.jpg",
+    "static/media/speciesIcon.svg": "/swascanapp/static/media/speciesIcon.e3b2815f79b0ef0a6076ea623c228e44.svg",
+    "static/media/charactersIcon.svg": "/swascanapp/static/media/charactersIcon.0dfbcc6155c5aeb7abd96120adfe860e.svg",
+    "static/media/planetsIcon.svg": "/swascanapp/static/media/planetsIcon.90b046f89a80bc6e6091879017f150c4.svg",
+    "index.html": "/swascanapp/index.html",
+    "static/media/moviesIcon.svg": "/swascanapp/static/media/moviesIcon.44189c59d9afd191a32861b68b0bcc3f.svg",
+    "static/media/closeMenuIcon.svg": "/swascanapp/static/media/closeMenuIcon.3ba01bf18703ad94c1de7bf53ba328ba.svg",
+    "static/media/menuIcon.svg": "/swascanapp/static/media/menuIcon.3c7fdfe50d69ce66e074466d44c0b52b.svg",
+    "static/media/homeIcon.svg": "/swascanapp/static/media/homeIcon.3aa9d6cd45ba871d9cb2a2788d706b3b.svg",
+    "main.898906db.js.map": "/swascanapp/static/js/main.898906db.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.898906db.js"
+  ]
+}

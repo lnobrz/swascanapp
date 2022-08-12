@@ -30,7 +30,6 @@ export const GlobalStorage = ({children}) => {
   const mobile = window.matchMedia('(max-width: 744px)').matches;
   const [isMobile, setIsMobile] = React.useState(false);
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-  const [showMenu, setShowMenu] = React.useState(true);
   const [name, setName] = React.useState(false);
   const [data, setData] = React.useState(null);
 
@@ -40,9 +39,7 @@ export const GlobalStorage = ({children}) => {
       isMobile, 
       setIsMobile, 
       windowWidth, 
-      setWindowWidth, 
-      showMenu, 
-      setShowMenu, 
+      setWindowWidth,
       name, 
       setName, 
       data, 
@@ -85,10 +82,6 @@ export const makeResponsible = ((isMobileSetter) => {
 
 /* Global Functions */
 
-export const clickOnMenuItemFunction = (showMenuSetter) => {
-  showMenuSetter(false);
-};
-
 export const getDataFunction = async (
   eventTargetVar, 
   category, 
@@ -105,6 +98,10 @@ export const getDataFunction = async (
   dataSetter(json);
   showMenuSetter(showMenuVar === true ? false : true);
   showMenuSetter(false);
+};
+
+export const handleClick = (showMenuSetter, showMenuVar) => {
+  showMenuSetter(!showMenuVar);
 };
 
 /* styled components ready for use */
@@ -127,7 +124,6 @@ export const ReadyDataMenu = ({
   apiBug, 
   nameArray, 
   getDataFunction,
-  loaderComponent
 }) => {
 
   return(
@@ -153,10 +149,10 @@ export const ReadyDataMenu = ({
 };
 
 export const ReadyMainContainer = ({
-  showMenuVariable, 
+  showMenuVariable,
+  clickFunction,
   dataArray, 
   category, 
-  clickFunction, 
   dataText1, 
   dataText2, 
   dataText3, 
@@ -184,7 +180,8 @@ export const ReadyMainContainer = ({
   dataInfoArray3, 
   dataInfoArray4
 }) => {
-
+  
+  const globalVars = React.useContext(GlobalContext);
   const [charactersData, setCharactersData] = React.useState(null);
   const [filmsData, setFilmsData] = React.useState(null);
   const [planetsData, setPlanetsData] = React.useState(null);

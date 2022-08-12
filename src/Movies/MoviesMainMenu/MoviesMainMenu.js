@@ -8,7 +8,6 @@ import {
   ReadyMainContainer, 
   ReadyMenuContainer, 
   ReadyMainMenuTitle,
-  clickOnMenuItemFunction, 
   getDataFunction 
 } 
 from "../../Global/GlobalComponents";
@@ -16,10 +15,15 @@ from "../../Global/GlobalComponents";
 const MoviesMainMenu = () => {
 
   const globalVars = React.useContext(GlobalContext);
+  const [showMenu, setShowMenu] = React.useState(true);
+  const handleClick = () => {
+    setShowMenu(!showMenu)
+  };
 
   React.useEffect(() => {
-    globalVars.setShowMenu(true);
+    setShowMenu(true);
     globalVars.setName(false);
+    window.innerWidth >= 746 ? globalVars.setIsMobile(false) : globalVars.setIsMobile(true)
   }, []);
 
   React.useEffect(() => getNamesArray([
@@ -51,30 +55,29 @@ const MoviesMainMenu = () => {
       itemId, 
       'films', 
       globalVars.setData, 
-      globalVars.setShowMenu, 
-      globalVars.showMenu
+      setShowMenu, 
+      showMenu
     );
 };
 
   return(
     <MainMenuContainer 
-    className={globalVars.showMenu === false ? "showData" : ""}
+    className={showMenu === false ? "showData" : ""}
     >
       
-      {globalVars.showMenu === false ?
+      {showMenu === false ?
       <>
       <ReadyDataMenu
       dataVar={globalVars.data}
       apiBug={false} 
       nameArray={globalVars.name} 
       getDataFunction={getData} 
-      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
       />
       <ReadyMainContainer 
-      showMenuVariable={globalVars.showMenu}
+      showMenuVariable={showMenu}
+      clickFunction={handleClick}
       dataArray={globalVars.data}
       category={"title"}
-      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
       dataText1={"Title: "}
       dataInfo1={globalVars.data.title}
       dataText2={"Episode ID: "}

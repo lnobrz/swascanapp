@@ -7,19 +7,24 @@ import {
   ReadyDataMenu, 
   ReadyMainContainer, 
   ReadyMenuContainer, 
-  ReadyMainMenuTitle, 
-  clickOnMenuItemFunction, 
-  getDataFunction
+  ReadyMainMenuTitle,
+  getDataFunction,
+  handleClick,
 } 
 from "../../Global/GlobalComponents";
 
 const CharactersMainMenu = () => {
 
   const globalVars = React.useContext(GlobalContext);
+  const [showMenu, setShowMenu] = React.useState(true);
+  const handleClick = () => {
+    setShowMenu(!showMenu)
+  };
   
   React.useEffect(() => {
-    globalVars.setShowMenu(true);
+    setShowMenu(showMenu);
     globalVars.setName(false);
+    window.innerWidth >= 746 ? globalVars.setIsMobile(false) : globalVars.setIsMobile(true)
   }, []);
 
   React.useEffect(() => getNamesArray([
@@ -59,30 +64,29 @@ const CharactersMainMenu = () => {
       itemId, 
       'people', 
       globalVars.setData, 
-      globalVars.setShowMenu, 
-      globalVars.showMenu
+      setShowMenu, 
+      showMenu
     );
   };
 
   return(
     <MainMenuContainer 
-    className={globalVars.showMenu === false ? "showData" : ""}
+    className={showMenu === false ? "showData" : ""}
     >
       
-      {globalVars.showMenu === false ?
+      {showMenu === false ?
       <>
       <ReadyDataMenu 
       dataVar={globalVars.data}
       apiBug={true} 
       nameArray={globalVars.name} 
       getDataFunction={getData} 
-      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
       />
       <ReadyMainContainer 
-      showMenuVariable={globalVars.showMenu}
+      showMenuVariable={showMenu}
+      clickFunction={handleClick}
       dataArray={globalVars.data}
       category={"name"}
-      clickFunction={clickOnMenuItemFunction(globalVars.setShowMenu)}
       dataText1={"Name: "}
       dataInfo1={globalVars.data.name}
       dataText2={"Birth year: "}

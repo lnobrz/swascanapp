@@ -87,7 +87,7 @@ export const MenuItemTitle = styled.p`
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 0.8em;
   color:#E5E5E0;
   text-transform: uppercase;
   margin: 0px 10px;
@@ -113,7 +113,7 @@ export const Data = styled.li`
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 0.9em;
   line-height: 20px;
   letter-spacing: 0.01em;
   text-transform: uppercase;

@@ -36,11 +36,12 @@ export const CoverTitle = styled.h2`
 export const CoverText = styled.p`
   display: flex;
   align-items: center;
+  text-align: right;
   max-width: 580px;
   background-color: #050505;
   height: 75px;
   border-radius: 4px;
-  padding: 5px 32px;
+  padding: 30px;
   font-family: 'Roboto', sans-serif;
   font-size: 1.25em;
   line-height: 1.56em;

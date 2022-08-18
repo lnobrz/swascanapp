@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
+  width: 50%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;

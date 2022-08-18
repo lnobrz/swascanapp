@@ -30,6 +30,10 @@ const Menu = () => {
     }
   })
 
+  React.useEffect(() => {
+    window.innerWidth >= 746 ? globalVars.setIsMobile(false) : globalVars.setIsMobile(true);
+  }, []);
+
   return(
     (globalVars.mobile && globalVars.isMobile === true ?
           

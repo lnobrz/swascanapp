@@ -24,7 +24,7 @@ const CharactersMainMenu = () => {
   React.useEffect(() => {
     setShowMenu(showMenu);
     globalVars.setName(false);
-    window.innerWidth >= 746 ? globalVars.setIsMobile(false) : globalVars.setIsMobile(true)
+    window.innerWidth >= 746 ? globalVars.setIsMobile(false) : globalVars.setIsMobile(true);
   }, []);
 
   React.useEffect(() => getNamesArray([

@@ -2,9 +2,9 @@
 
 <h2> What is SWASCAN </h2>
 
-SWAPI is a web application that displays informations of the universe of Star Wars. In my project you'll be able to see all the characters, movies, planets and species informations </br>
+SWAPI is a web application that displays informations of the universe of Star Wars. In my project, you'll be able to see all the characters, movies, planets and species informations </br>
 
-Swascan is a challenge made by the Inters Formation Program of the company I work on (Instituto Atlântico). They challenged all the interns that has chosen the frontend development trail to develop an application that consumes and displays SWAPI's data
+Swascan is a challenge made by the Interns Formation Program of the company I work on (Instituto Atlântico). They challenged all the interns that has chosen the frontend development trail to develop an application that consumes and displays SWAPI's data
 
 <h2> Why "SWASCAN" </h2>
 

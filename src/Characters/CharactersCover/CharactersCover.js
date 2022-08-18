@@ -3,7 +3,7 @@ import {ReadyCover} from '../../Global/GlobalComponents';
 
 const CharactersCover = () => {
   return (
-    <ReadyCover title={"Characters"} text={"Click on a character's name to read informations about them"}/>
+    <ReadyCover title={"Characters"} text={"Click on the name of a character and gain the knowlege needed to defeat Darth Vader"}/>
 );
 };
 
